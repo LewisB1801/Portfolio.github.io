@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Graphic Design Portfolio - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
+</head>
+<body>
+	<header class="site-header">
+        <div class="header-content">
+          <a href="#" class="logo">LB Designs</a>
+          <nav class="site-nav">
+            <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="two.html">Portfolio</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+      <section class="hero">
+        <div class="parallax">
+          <div class="overlay"></div>
+          <div class="hero-text">
+            <h1>My Graphic Design Portfolio</h1>
+            <p>Welcome to my portfolio website! Take a look at my work and feel free to contact me if you have any questions or projects you would like to collaborate on.</p>
+            <a href="#portanchor" class="cta-button">View Portfolio</a>
+          </div>
+        </div>
+      </section>
+      
+      
+      <div class="wrapper">
+           
+      <section class="about" id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>Hi, my name is John Doe and I am a graphic designer based in New York City. I have a passion for creating visually stunning designs and bringing ideas to life. With over 5 years of experience in the field, I have worked with a variety of clients ranging from small startups to large corporations.</p>
+              <p>My areas of expertise include branding, typography, web design, and print design. I am always looking for new challenges and opportunities to improve my skills. When I am not designing, I enjoy traveling, photography, and trying new foods.</p>
+              <button class="cta">Contact Me</button>
+            </div>
+            <div class="about-image">
+              <img src="https://via.placeholder.com/400x400" alt="John Doe">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section id="services">
+        <div class="container">
+          <div class="services-wrapper">
+            <div class="service">
+                <ion-icon name="desktop-outline"></ion-icon>            
+                <h3>WEB/UI</h3>
+              <p>Creating intuitive interfaces for websites & apps that are visually appealing and user-friendly.</p>
+            </div>
+            <div class="service">
+                <ion-icon name="shapes-outline"></ion-icon>              
+                <h3>BRANDING</h3>
+              <p>Branding is the practice of creating a unique name, symbol, and design that represents a company.</p>
+            </div>
+            <div class="service">
+                <ion-icon name="code-slash-outline"></ion-icon>              
+                <h3>WEBSITE</h3>
+              <p>Web dev is creating and maintaining websites. Requires coding skills, creativity, and attention to detail</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+	<section id="portanchor" class="portfolio">
+		<h2>Portfolio</h2>
+		<ul class="portfolio">
+            <li>
+              <div>
+                <h3>AON</h3>
+                <p>This modern design of the Angel of the North features a minimalist style, incorporating simple geometric shapes and a limited color palette.</p>
+              </div>
+              <img src="Assets/AON Duo.png" alt="Project 1">
+            </li>
+            <li>
+              <div>
+                <h3>Project 2</h3>
+                <p>Some description about project 2.</p>
+              </div>
+              <img src="Assets/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Project 2">
+            </li>
+            <li>
+              <div>
+                <h3>Project 3</h3>
+                <p>This web design for Edmar Tyres and Exhaust features a sleek and professional aesthetic, utilizing a minimalist color palette. The high-quality images and clean layout create an immersive and user-friendly experience.</p>
+              </div>
+              <img src="Assets/Mug.png" alt="Project 3">
+            </li>
+          </ul>
+	    </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-text">
+            <h3>Contact Details</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown USA</p>
+            <p><i class="fas fa-phone"></i> (555) 555-1234</p>
+            <p><i class="fas fa-envelope"></i> info@company.com</p>
+            <br>
+            <div class="social-icons">
+                <a href="#"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </div>
+            <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+        </div>
+          <div class="contact-form">
+            <h3>Contact Us</h3>
+            <form method="post" action="main.php">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+              </form> 
+        </div>
+      </footer>
+      
+
+      
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="Script.js"></script>
+</html>

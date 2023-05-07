@@ -1,0 +1,491 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    max-width: 1400px;
+    padding-top: auto;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+header.transparent {
+    background-color: transparent;
+}
+
+header:not(.transparent) {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.site-header.scroll {
+    background-color: #f1f1f1;
+}
+
+.site-header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-nav li {
+    margin-left: 2rem;
+}
+
+.site-nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-nav a:hover {
+    color: #d92424;
+}
+
+.site-nav a.active {
+    color: #ff0000;
+    /* Change this to the color you want */
+}
+
+.two-page .site-header {
+    background-color: #1d1d1d;
+}
+
+.two-page {
+    margin-top: 5%;
+}
+
+.hero {
+    background-image: url(Assets/pexels-dave-tombi-7705878.jpg);
+    height: calc(120vh - 80px);
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    background-color: #1d1d1d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.hero-text h1 {
+    color: #d92424;
+    font-size: 3rem;
+    font-weight: medium;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    color: #f1f1f1;
+    font-size: 1rem;
+    font-weight: light;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+/* hide header until scrolled down */
+body.hide-header .site-header {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* show header when scrolled down */
+body.scroll-header .site-header {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* About Me section */
+.about {
+    background-color: #f1f1f1;
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex-basis: 60%;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-text .cta {
+    background-color: #d92424;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-text .cta:hover {
+    background-color: #c21f1f;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text,
+    .about-image {
+        flex-basis: 100%;
+    }
+
+    .about-image {
+        margin-top: 30px;
+    }
+}
+
+#services {
+    padding: 40px 0;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1d1d1d;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.service img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d92424;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 18px;
+    color: #f1f1f1;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+ion-icon {
+    font-size: 80px;
+    color: #f1f1f1;
+}
+
+.portfolio {
+    padding: 2rem;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio li {
+    margin: 1rem;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio li div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 3;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio li:hover div {
+    opacity: 1;
+}
+
+.portfolio li div h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio li div p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    display: none;
+}
+
+.portfolio li:hover div p {
+    display: block;
+}
+
+.portfolio li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio li:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio li:hover::after {
+    opacity: 1;
+}
+
+.site-footer {
+    background-color: #1d1d1d;
+    color: #f1f1f1;
+    padding: 40px 0;
+    margin-top: 10%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-text {
+    flex-basis: calc(50% - 20px);
+}
+
+.contact-form {
+    flex-basis: calc(50% - 20px);
+    margin-left: 40px;
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+    font-family: "poppins";
+}
+
+.contact-form button[type="submit"] {
+    background-color: #ff4646;
+    color: #f1f1f1;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(27, 27, 27, 0.2);
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #e04141;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+}
+
+.social-media-icons a i {
+    color: #555;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover i {
+    color: #007bff;
+}
+
+
+
+
+
+
+
+
+/* Hide the scrollbar but still allow scrolling */
+body::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #D92424;
+  }
+  
+  /* For Firefox */
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #D92424 #f1f1f1;
+  }
+  
